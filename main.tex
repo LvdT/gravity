@@ -6,11 +6,51 @@
 
 \input{headers/default}
 \input{headers/si}
+\input{headers/commands}
 % \input{headers/bibliography}
 % \input{headers/drawings}
 % \input{headers/fancy}
 
 \begin{document}
 \maketitle
+
+\section{Introduction to Classical Mechanics}
+
+In Classical Mechanis (CM) time and space are treated as two distinct concepts.
+Events are identified by their position in some frame of reference, represented
+by a vector \(\vv{r}\), and the time at which they occur, represented by a
+scalar \(t\).
+
+The simplest formulation of CM can be summarised in three laws and is based on
+the concept of \textbf{force}. A force \(\vv{F}\) is a vector quantity
+representing an interaction between two bodies. This formulation is (unduly)
+credited to Newton because it was first published as a unified theory in the
+\emph{Principia}.
+
+\begin{enumerate}[label=\textbf{N\arabic*},start=0]
+  \item \label{law::N0} \textbf{Principle of Superposition:} the net force
+  on a body is the vector sum of the individual forces acting on it.
+  \item \label{law::N1} \textbf{Law of Inertia:} an inertial frame of reference
+  is one where, in the absence of external interactions, bodies are in uniform
+  linear motion.
+  \item \label{law::N2} \textbf{Law of Acceleration:} in an inertial frame of
+  reference the acceleration of a body is directly proportional to the net force
+  acting on it.
+  \item \label{law::N3} \textbf{Law of Reaction:} when a body exerts a force on
+  another it is subject to a force equal in magnitude and opposite in direction
+  produced by the second body.
+\end{enumerate}
+
+Law \ref{law::N2} can be used to introduce the concept of \textbf{inertial mass}
+\(m\), which is taken as the proportionality constant between force and
+acceleration. The law can then be stated with the following equation.
+
+\begin{equation}\label{eqn:N2}
+    \vv{F} = m \vv{\ddot{r}}\tag{N2}
+\end{equation}
+
+\section{Galilean gravity}
+
+The simplest theory of gravity in our possession is due to Galileo
 
 \end{document}
