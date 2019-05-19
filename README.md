@@ -1,2 +1,2 @@
-# LaTeX-template
-Default LaTeX template for new projects.
+# gravity
+Notes on gravity, from Galileo to Einstein.
