@@ -17,17 +17,24 @@
 
 \usepackage[math-style=ISO,bold-style=ISO]{unicode-math}
 \defaultfontfeatures{Ligatures=TeX,ExternalLocation=fonts/,Extension=.otf}
-\setmathfont{XITSMath}
-\setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITSMath}
+\setmathfont{LibertinusMath}
+\setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{LibertinusMath}
 \defaultfontfeatures{
   Ligatures=TeX,
   ExternalLocation=fonts/,
-  Extension=.otf,
+  Extension=.otf
+}
+\setmainfont[
   UprightFont=*R,
   ItalicFont=*I,
   BoldFont=*B,
   BoldItalicFont=*BI
-}
-\setmainfont{TGPagella}
-\setsansfont{TGAdventor}
-\setmonofont{TGCursor}
+]{LibertinusSerif}
+\setsansfont[
+  UprightFont=*R,
+  ItalicFont=*I,
+  BoldFont=*B
+]{LibertinusSans}
+\setmonofont[
+  UprightFont=*R
+]{LibertinusMono}
