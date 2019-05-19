@@ -17,33 +17,21 @@
 \section{Introduction to Classical Mechanics}
 
 In Classical Mechanis (CM) time and space are treated as two distinct concepts.
-Events are identified by their position in some frame of reference, represented
-by a vector \(\vv{r}\), and the time at which they occur, represented by a
-scalar \(t\).
+Events are identified by their position in some frame of reference, represented by a vector \(\vv{r}\), and the time at which they occur, represented by a scalar \(t\).
 
-The simplest formulation of CM can be summarised in three laws and is based on
-the concept of \textbf{force}. A force \(\vv{F}\) is a vector quantity
-representing an interaction between two bodies. This formulation is (unduly)
-credited to Newton because it was first published as a unified theory in the
-\emph{Principia}.
+The simplest formulation of CM can be summarised in three laws and is based on the concept of \textbf{force}.
+A force \(\vv{F}\) is a vector quantity representing an interaction between two bodies.
+This formulation is (unduly) credited to Newton because it was first published as a unified theory in the \emph{Principia}.
 
 \begin{enumerate}[label=\textbf{N\arabic*},start=0]
-  \item \label{law::N0} \textbf{Principle of Superposition:} the net force
-  on a body is the vector sum of the individual forces acting on it.
-  \item \label{law::N1} \textbf{Law of Inertia:} an inertial frame of reference
-  is one where, in the absence of external interactions, bodies are in uniform
-  linear motion.
-  \item \label{law::N2} \textbf{Law of Acceleration:} in an inertial frame of
-  reference the acceleration of a body is directly proportional to the net force
-  acting on it.
-  \item \label{law::N3} \textbf{Law of Reaction:} when a body exerts a force on
-  another it is subject to a force equal in magnitude and opposite in direction
-  produced by the second body.
+  \item \label{law::N0} \textbf{Principle of Superposition:} the net force on a body is the vector sum of the individual forces acting on it.
+  \item \label{law::N1} \textbf{Law of Inertia:} an inertial frame of reference is one where, in the absence of external interactions, bodies are in uniform linear motion.
+  \item \label{law::N2} \textbf{Law of Acceleration:} in an inertial frame of reference the acceleration of a body is directly proportional to the net force acting on it.
+  \item \label{law::N3} \textbf{Law of Reaction:} when a body exerts a force on another it is subject to a force equal in magnitude and opposite in direction produced by the second body.
 \end{enumerate}
 
-Law \ref{law::N2} can be used to introduce the concept of \textbf{inertial mass}
-\(m\), which is taken as the proportionality constant between force and
-acceleration. The law can then be stated with the following equation.
+Law \ref{law::N2} can be used to introduce the concept of \textbf{inertial mass} \(m\), which is taken as the proportionality constant between force and acceleration.
+The law can then be stated with the following equation.
 
 \begin{equation}\label{eqn:N2}
     \vv{F} = m \, \vv{\ddot{r}}\tag{N2}
@@ -51,20 +39,65 @@ acceleration. The law can then be stated with the following equation.
 
 \section{Galilean gravity}
 
-The simplest theory of gravity in our possession is due to Galileo and simply
-states that acceleration due to gravity is constant, regardless of the size,
-velocity or position of a body. In hindsight, Galilean gravity can be thought of
-as gravity in the limit where Earth is and indefinitely extended plane with a
-uniform mass distribution.
+The simplest theory of gravity in our possession is due to Galileo and simply states that acceleration due to gravity is constant, regardless of the size, velocity or position of a body.
+In hindsight, Galilean gravity can be thought of as gravity in the limit where Earth is and indefinitely extended plane with a uniform mass distribution.
 %
 \[\vv{\ddot{r}} = \vv{g}\]
 %
-This theory, although excessively simple, lays the foundation of the
-\textbf{Equivalence Principle}. One of many possible statements of this
-principle is that the trajectory of a body subject to gravity is only dependent
-upon its initial position and velocity. This principle is backed up by all
-experimental evidence to date.
+This theory, although excessively simple, lays the foundation of a fundamental principle.
+
+\begin{enumerate}[label=\textbf{EP}]
+  \item \label{law::EP} \textbf{Equivalence Principle:} all bodies subject to a gravitational field will undergo the same acceleration if they are located at the same coordinates in space and time.
+\end{enumerate}
+
+This principle is backed up by all experimental evidence to date.
 
 \section{Hookean gravity}
+
+Generally credited to Newton, most of the fundamental work on this theory was actually due to Hooke.
+The basic principle of the theory is that every body exerts a gravitational force on every other body.
+This force pulls the objects towards each other and its intensity is:
+\begin{itemize}
+  \item directly proportional to the \textbf{active gravitational mass} \(\widetilde{m}^{\text{(a)}}\) of the body exerting the force,
+  \item directly proportional to the \textbf{passive gravitational mass} \(\widetilde{m}^{\text{(p)}}\) of the body subject to the force,
+  \item inversely proportional to the square of their distance.
+\end{itemize}
+
+This can be expressed as the following formula
+%
+\[F_{1 \to 2} = G \, \frac{\widetilde{m}_1^{\text{(a)}}
+\widetilde{m}_2^{\text{(p)}}}{\norm{\vv{r}_{1 \to 2}}^2}\]
+%
+where \(F_{1 \to 2}\) is the intensity of the force exerted by body 1 on body 2 and \(\vv{r}_{1 \to 2} = \vv{r}_{2} - \vv{r}_1\) is the relative position of body 2 with respect to body 1.
+\(G\) is a universal constant know as the \textbf{gravitational constant} or \textbf{Cavendish constant}.
+
+By applying \ref{law::N3} we require that \(F_{1 \to 2} = F_{2 \to 1}\).
+This can be manipulated to obtain that the ratio between active and passive gravitational mass must be constant for all bodies.
+%
+\[\frac{\widetilde{m}_1^{\text{(a)}}}{\widetilde{m}_1^{\text{(p)}}} =
+\frac{\widetilde{m}_2^{\text{(a)}}}{\widetilde{m}_2^{\text{(p)}}}\]
+%
+Therefore we can take this constant to be unity and drop the distinction between the two types of gravitational mass.
+Our law then becomes
+%
+\[F_{1 \to 2} = G \, \frac{\widetilde{m}_1\widetilde{m}_2}
+{\norm{\vv{r}_{1 \to 2}}^2}\]
+%
+We follow up by applying \ref{law::N2} to the second body and finding its
+acceleration \(\ddot{r}_2\).
+%
+\[\ddot{r}_2 = G \, \frac{\widetilde{m}_1}{R^2} \frac{\widetilde{m}_2}{m_2}\]
+%
+By virtue of \ref{law::EP} this acceleration must not depend upon any properties of the body itself, the ratio between gravitational and inertial mass must therefore be a constant.
+This constant can also be taken to be unity, removing any and all practical distinctions between the various types of mass.
+
+We thus obtain the \textbf{Law of Universal Gravitation} in its most commonly used forms.
+
+\begin{equation}\label{eqn:N2}
+    F_{1 \to 2} = G \, \frac{m_1 m_2}{\norm{\vv{r}_{1 \to 2}}^2}
+    \qquad
+    \vv{F}_{1 \to 2} = - G \, \frac{m_1 m_2}{\norm{\vv{r}_{1 \to 2}}^3}  \, \vv{r}_{1 \to 2}
+    \tag{UG}
+\end{equation}
 
 \end{document}
