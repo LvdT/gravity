@@ -14,9 +14,9 @@
 \begin{document}
 \maketitle
 
-\section{Introduction to Classical Mechanics}
+\section{Classical Laws of Motion}
 
-In Classical Mechanis (CM) time and space are treated as two distinct concepts.
+In classical mechanics time and space are treated as two distinct concepts.
 Events are identified by their position in some frame of reference, represented by a vector \(\vv{x}\), and the time at which they occur, represented by a scalar \(t\).
 
 The simplest formulation of CM is based on the concept of \textbf{force}.
@@ -38,6 +38,66 @@ The law can then be stated as
 \begin{equation}\label{eqn:N2}
     \vv{F} = m \, \ddot{\vv{x}}\tag{N2}
 \end{equation}
+
+\section{Galilean relativity}
+
+In general the concept of relativity implies that the laws of physics must be invariant under certain classes of transformations.
+The first step towards relativity is postulating that space and time must be homogeneous and isotropic.
+
+\begin{enumerate}[label=\textbf{H\textsubscript{s}}]
+  \item \label{law::HomS} \textbf{Homogeneity of Space:} the laws of physics are invariant under spatial translations.
+\end{enumerate}
+\begin{enumerate}[label=\textbf{H\textsubscript{t}}]
+  \item \label{law::HomT} \textbf{Homogeneity of Time:} the laws of physics are invariant under time translations.
+\end{enumerate}
+\begin{enumerate}[label=\textbf{I\textsubscript{s}}]
+  \item \label{law::IsoS} \textbf{Isotropy of Space:} the laws of physics are invariant under spatial rotation and reflections.
+\end{enumerate}
+\begin{enumerate}[label=\textbf{I\textsubscript{t}}]
+  \item \label{law::IsoT} \textbf{Isotropy of Time:} the laws of physics are invariant under time reversal.
+\end{enumerate}
+
+This means that the symmetry group of physical laws must be, at least, the combination of the one dimensional Euclidean group \(\euc{1}\) acting on the time coordinate and of the three dimensional Euclidean group \(\euc{3}\) acting on the spatial coordinates.
+We name this \textbf{Euclidean spacetime} \(\euc{1,3}\).
+%
+\[\euc{1,3} \cong \euc{1} \rtimes \euc{3}\]
+%
+Often reflections and time reversal are ignored, restricting us the special subgroup.
+It is helpful to observe that \(\seuc{1}\) is isomorphic to the group of one dimensional translations \(\transl{1}\).
+%
+\[\seuc{1,3} \cong \seuc{1} \rtimes \seuc{3} \cong \transl{1} \rtimes \seuc{3}\]
+%
+Galilean relativity involves adding two other principles to those mentioned above.
+
+\begin{enumerate}[label=\textbf{SR}]
+  \item \label{law::SR} \textbf{Special Principle of Relativity:} the laws of physics are the same in all frames of reference in uniform linear motion with respect to one another.
+\end{enumerate}
+\begin{enumerate}[label=\textbf{G\textsubscript{t}}]
+  \item \label{law::CT} \textbf{Principle of Galilean Time:} the rate at which time flows is the same in all frame of reference.
+\end{enumerate}
+
+This last principle was thoroughly tested by Galileo using water clocks.
+Unfortunately we now know it to be incorrect, although it holds approximately for frames or reference moving with respect to each other at speeds much smaller than the speed of light.
+The transformations that satisfy these two principles are known as \textbf{Galilean boosts} and take the following form
+
+\begin{equation}\label{eqn:GTr}
+\begin{cases}
+  \vv{x}' = \vv{x} - \vv{v}t \\
+  t' = t
+\end{cases}\tag{GTr}
+\end{equation}
+
+where \(\vv{v}\) is a parameter of the transformation, representing the velocity of the relative motion.
+It is fairly simple to prove that Galilean boosts form a group, which we shall denote by \(\galb{3}\).
+In doing so, one obtains the well-known formula for the addition of classical velocities.
+
+\begin{equation}\label{eqn:CLVadd}
+  \vv{v} = \vv{v}_1 + \vv{v}_2\tag{CV\textsubscript{+}}
+\end{equation}
+
+The group of symmetries that classical mechanics must adhere to, the combination of Galilean boosts and Euclidean spacetime, is known as the \textbf{Galilean group} \(\gal{3}\).
+%
+\[\gal{3} = \galb{3} \rtimes \euc{1,3}\]
 
 \section{Galilean gravity}
 
@@ -101,42 +161,5 @@ We thus obtain the \textbf{Law of Universal Gravitation} in its most commonly us
     \vv{F}_{1 \to 2} = - G \, \frac{m_1 m_2}{\norm{\vv{r}_{1 \to 2}}^3}  \, \vv{r}_{1 \to 2}
     \tag{UG}
 \end{equation}
-
-\section{Galilean relativity}
-
-In general the concept of relativity implies that the laws of physics must be invariant under certain classes of transformations.
-The first step towards relativity is postulating that space and time must be homogeneous and isotropic.
-
-\begin{enumerate}[label=\textbf{H\textsubscript{s}}]
-  \item \label{law::HomS} \textbf{Homogeneity of Space:} the laws of physics are invariant under spatial translations.
-\end{enumerate}
-\begin{enumerate}[label=\textbf{H\textsubscript{t}}]
-  \item \label{law::HomT} \textbf{Homogeneity of Time:} the laws of physics are invariant under time translations.
-\end{enumerate}
-\begin{enumerate}[label=\textbf{I\textsubscript{s}}]
-  \item \label{law::IsoS} \textbf{Isotropy of Space:} the laws of physics are invariant under spatial rotation and reflections.
-\end{enumerate}
-\begin{enumerate}[label=\textbf{I\textsubscript{t}}]
-  \item \label{law::IsoT} \textbf{Isotropy of Time:} the laws of physics are invariant under time reversal.
-\end{enumerate}
-
-This means that the symmetry group of physical laws must be, at least, the combination of the one dimensional Euclidean group \(\euc{1}\) for the time coordinate and of the three dimensional Euclidean group \(\euc{3}\) for the spatial coordinates.
-For the sake of brevity we denote this by \(\euc{1,3}\).
-%
-\[\euc{1,3} \cong \euc{1} \rtimes \euc{3}\]
-%
-Often reflections and time reversal are ignored, restricting us the special subgroup.
-It is helpful to observe that \(\seuc{1}\) is isomorphic to the group of one dimensional translations \(\transl{1}\).
-%
-\[\seuc{1,3} \cong \seuc{1} \rtimes \seuc{3} \cong \transl{1} \rtimes \seuc{3}\]
-%
-Galilean relativity involves adding another principle to the ones already mentioned above.
-
-\begin{enumerate}[label=\textbf{SR\textsubscript{w}}]
-  \item \label{law::SRw} \textbf{(Weak) Special Principle of Relativity:} the laws of motion are the same in all frames of reference in uniform linear motion with respect to one another.
-\end{enumerate}
-
-An important remark is that such wording of the principle only refers to the laws of \emph{motion}, and therefore to acceleration.
-It does not ensure that \emph{all} laws of physics are the same.
 
 \end{document}
